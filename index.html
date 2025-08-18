@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>Wood Detection</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2> ตรวจจับไม้</h2>
+    
+    <div class="upload-section">
+      <div class="file-input-wrapper">
+        <input type="file" accept="image/*" id="cameraInput" capture="environment" multiple="false" required>
+        <label for="cameraInput" class="file-input-label">
+          📸 เลือกภาพไม้
+        </label>
+      </div>
+      <div class="file-name" id="fileName"></div>
+    </div>
+
+    <button class="detect-button" onclick="uploadImage()" id="detectBtn" disabled>
+      <div class="loading-spinner" id="loadingSpinner"></div>
+      <span id="btnText">🔍 เริ่มตรวจจับไม้</span>
+    </button>
+
+    <div id="resultText"></div>
+    <img id="resultImage" src="" alt="ผลลัพธ์การตรวจจับ"/>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
